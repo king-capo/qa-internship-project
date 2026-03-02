@@ -1,15 +1,10 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
-
+f
 
 SEARCH_INPUT = (By.NAME, 'q')
 SEARCH_SUBMIT = (By.NAME, 'btnK')
-
-
-@given('Open Google page')
-def open_google(context):
-    context.driver.get('https://www.google.com/')
 
 
 @when('Input {search_word} into search field')

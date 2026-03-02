@@ -13,7 +13,7 @@ driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 
 # open the url
-driver.get('https://www.google.com/')
+driver.get('https://www.google.com/') ##
 
 # populate search field
 search = driver.find_element(By.NAME, 'q')
