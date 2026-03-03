@@ -6,7 +6,7 @@ from environment import PASSWORD
 
 EMAIL_INPUT = (By.ID, 'email-2')
 PASSWORD_INPUT = (By.NAME, 'Password')
-LOGIN_BUTTON = (By.XPATH, '//button[@type="submit"]')
+LOGIN_BUTTON = (By.XPATH, '//a[@class="login-button w-button"]')
 USR_NAME = 'Silas'
 
 @given('Open Reelly login page')
@@ -27,9 +27,8 @@ def input_valid_credentials(context):
 @when('Click on login button')
 def click_login_button(context):
     context.driver.find_element(*LOGIN_BUTTON).click()
-
-
-@then('User is on Reelly homepage')
-def verify_reelly_homepage(context):
+    sleep(4)
     assert USR_NAME in context.driver.find_element(By.XPATH, '//span[@class="truncate block"]').text, \
         f'Expected query not displayed'
+    print("User is logged in to Reelly")
+

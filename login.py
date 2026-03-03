@@ -41,9 +41,8 @@ assert expected_text == actual_text, f'Expected "{expected_text}" but got "{actu
 sleep(4)
 
 # filter market results for Agent
-driver.find_element(By.CSS_SELECTOR, '[wized*=servicesOfferedFilterAgent]').click()
+driver.find_element(By.CSS_SELECTOR, '[wized*=servicesOffersFilterAgent]').click()
 sleep(4)
 
 # click "Agent" button
-driver.find_element(By.CSS_SELECTOR, '[wized*=servicesOfferedFilterAgent]').click()
-driver.quit()
+assert driver.quit()
